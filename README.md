@@ -3,7 +3,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Demo Link
 - [try it out!](https://textscanner-3zjndj647-andys-projects-aac59fa4.vercel.app/)
 
-## Getting Started
+## Video Walkthrough
+- [YouTube](https://youtu.be/yLmyKW0Vsfs)
+
+### Getting Started
 
 Install dependencies
 ```
