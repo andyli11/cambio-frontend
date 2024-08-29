@@ -30,7 +30,7 @@ const ImageSearch: React.FC<ImageSearchProps> = ({ searchText }) => {
             value={text} // Bind the input value to the state
           />
           <button 
-            className='flex-shrink-0 bg-purple-800 hover:bg-purple-900 border-purple-800 hover:border-purple-900 text-sm border-4 text-white py-1 px-2 rounded' 
+            className='flex-shrink-0 bg-purple-800 hover:bg-purple-900 border-purple-800 hover:border-purple-900 text-sm border-4 text-white py-1 px-2 rounded hover:cursor-pointer' 
             type='submit'
             disabled // Disabled because the search is handled on keypress, not form submission
           >

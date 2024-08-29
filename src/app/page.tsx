@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import FileUpload from './components/FileUpload';
 import ImageCard from './components/ImageCard';
 import ImageSearch from './components/ImageSearch';
+import Uploader from './components/Uploader'
 import axios from 'axios';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Define the structure of the ImageData type
 interface ImageData {
@@ -28,6 +30,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [term, setTerm] = useState<string>('');
+  const [uploadComplete, setUploadComplete] = useState<boolean>(false);
 
   // fetch data from the API when the component mounts
   useEffect(() => {
@@ -60,8 +63,13 @@ const App: React.FC = () => {
       }
     };
 
-    fetchData(); // Call the fetchData function
-  }, []);
+    if (uploadComplete) {
+      fetchData();
+      setUploadComplete(false);
+    } else {
+      fetchData();
+    }
+  }, [uploadComplete]);
 
   // filter images based on the search term
   useEffect(() => {
@@ -81,8 +89,9 @@ const App: React.FC = () => {
   return (
     <div>
       {/* Render the FileUpload component */}
-      <div className="mt-8 mb-8 justify-content flex justify-center">
-        <FileUpload />
+      <div className="mt-8 mb-8 flex justify-center">
+        {/* <FileUpload /> */}
+        <Uploader setUploadComplete={setUploadComplete}/>
       </div>
 
       {/* Main container for the image search and display */}
