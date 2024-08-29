@@ -59,7 +59,7 @@ const Uploader: React.FC<UploaderProps> = ({setUploadComplete}) => {
                 window.location.reload();
                 setTimeout(() => {
                     setUploadComplete(true);
-                }, 1000);  // 1000ms = 1 second delay
+                }, 2000);  // 2000ms = 2 second delay
             })
             .catch(error => console.error('Error uploading files:', error));
         
