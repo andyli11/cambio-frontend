@@ -6,6 +6,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Video Walkthrough
 - [YouTube](https://youtu.be/yLmyKW0Vsfs)
 
+## Backend Link
+- [Backend](https://github.com/andyli11/textscanner-backend)
+
 ### Getting Started
 
 Install dependencies
